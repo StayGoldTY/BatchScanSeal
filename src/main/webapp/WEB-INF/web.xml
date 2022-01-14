@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>BatchScanSeal</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.ico</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.woff</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.tff</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.pdf</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.ofd</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>com.kinggrid.scan.seal.listener.InitWebContextListener</listener-class>
+    </listener>
+
+    <!--获取文件-->
+    <servlet>
+        <description></description>
+        <display-name>HomeServlet</display-name>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.kinggrid.scan.seal.servlet.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <!--获取文件-->
+    <servlet>
+        <description></description>
+        <display-name>GetFileServlet</display-name>
+        <servlet-name>GetFileServlet</servlet-name>
+        <servlet-class>com.kinggrid.scan.seal.servlet.GetFileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetFileServlet</servlet-name>
+        <url-pattern>/getFile</url-pattern>
+    </servlet-mapping>
+
+    <!--批量盖章-->
+    <servlet>
+        <description></description>
+        <display-name>BatchScanSealServlet</display-name>
+        <servlet-name>BatchScanSealServlet</servlet-name>
+        <servlet-class>com.kinggrid.scan.seal.servlet.BatchScanSealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BatchScanSealServlet</servlet-name>
+        <url-pattern>/batchScanSeal</url-pattern>
+    </servlet-mapping>
+
+    <!--获取二维码图片-->
+    <servlet>
+        <description></description>
+        <display-name>ScanQrcodeServlet</display-name>
+        <servlet-name>ScanQrcodeServlet</servlet-name>
+        <servlet-class>com.kinggrid.scan.seal.servlet.ScanQrcodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ScanQrcodeServlet</servlet-name>
+        <url-pattern>/scanQrcode</url-pattern>
+    </servlet-mapping>
+
+    <!--建立会话-->
+    <servlet>
+        <description>建立会话</description>
+        <display-name>EstablishSessionServlet</display-name>
+        <servlet-name>EstablishSessionServlet</servlet-name>
+        <servlet-class>com.kinggrid.scan.seal.servlet.EstablishSessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EstablishSessionServlet</servlet-name>
+        <url-pattern>/establishSession</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Log4jInit</servlet-name>
+        <servlet-class>com.kinggrid.scan.seal.servlet.Log4jInit</servlet-class>
+        <init-param>
+            <param-name>log4j</param-name>
+            <param-value>/WEB-INF/log4j.properties</param-value>
+        </init-param>
+        <!--优先级最高-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Log4jInit</servlet-name>
+        <url-pattern>/Log4jInit</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CharacterEncoding</filter-name>
+        <filter-class>com.kinggrid.scan.seal.filter.CharacterEncoding</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharacterEncoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

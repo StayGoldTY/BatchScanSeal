@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/ HTTP/1.1" 200 13097 http-bio-8083-exec-1 145
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/bootstrap/bootstrap.min.css HTTP/1.1" 304 - http-bio-8083-exec-3 6
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/bootstrap-table/bootstrap-table.min.css HTTP/1.1" 304 - http-bio-8083-exec-2 3
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/jquery.min.js HTTP/1.1" 304 - http-bio-8083-exec-4 3
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/bootstrap/bootstrap.min.js HTTP/1.1" 304 - http-bio-8083-exec-5 2
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/bootstrap-table/bootstrap-table.min.js HTTP/1.1" 304 - http-bio-8083-exec-6 2
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/bootstrap-table/bootstrap-table-export.min.js HTTP/1.1" 304 - http-bio-8083-exec-7 4
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/static/bootstrap-table/bootstrap-table-zh-CN.min.js HTTP/1.1" 304 - http-bio-8083-exec-9 3
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/favicon.ico HTTP/1.1" 404 1001 http-bio-8083-exec-7 1
+0:0:0:0:0:0:0:1 - - [15/Nov/2021:09:23:10 +0800] "GET /BatchScanSeal/getFile HTTP/1.1" 200 252 http-bio-8083-exec-9 126
